@@ -1,3 +1,6 @@
+body{
+  margin: 0;
+}
 .site-header {
     z-index: 10;
     font-family: 'Roboto Condensed', sans-serif;
@@ -16,16 +19,17 @@
       padding: 22px 140px 22px;
       a {
         img {
-          max-width: 200px;
+          width: 200px;
           height: auto;
           @media screen and (min-width: 768px) {
-            max-width: 314px;
+            max-width: 200px;
             height: auto;
           }
         }
       }
     }
     .nav-links {
+      padding-right: 140px;
       display: none;
       width: 100%;
       background-color: #DEF0FF;
@@ -49,7 +53,7 @@
             font-size: 16px;
             text-transform: lowercase;
             font-family: 400;
-            color: #7f53ac;
+            color: #000000;
             letter-spacing: 1.2px;
             padding: 10px 15px;
             text-decoration: none;
@@ -57,27 +61,76 @@
           }
         }
         li:hover {
-          background-color: #efe0ff;
+          background-color: #ffffff;
         }
-      }
-    }
-    button {
-      cursor: pointer;
-      background: transparent;
-      border: none;
-      max-width: 50px;
-      display: block;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      @media screen and (min-width: 768px) {
-        top: 20px;
-      }
-      @media screen and (min-width: 1250px) {
-        display: none;
       }
     }
   }
   .nav-links.active {
     display: block;
   }
+
+.site-body{
+  margin-top: -20px;
+  width: 100%;
+  background-color: #f3f3f3;
+
+}
+/*.site-footer{
+  ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @media screen and (min-width: 1250px) {
+      flex-direction: row;
+    }
+    
+    
+    li {
+      list-style: none;
+      width: 10px;
+      a {
+        width: 32px;
+        text-transform: lowercase;
+        font-family: 400;
+        color: #000000;
+        letter-spacing: 1.2px;
+        padding-right: 140;
+        text-decoration: none;
+        display: block;
+      }
+    }
+    li:hover {
+      background-color: #ffffff;
+    }
+  }
+}
+*/
+
+.site-footer{
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding-right: 124px;
+    overflow: hidden;
+    background-color: #f3f3f3;
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+  
+  li {
+    float: right;
+    align-items: center;
+  }
+  
+  li a {
+    align-items: center;
+    display: inline;
+    color: white;
+    text-align: center;
+    padding-left: 20px;
+    padding-top: 37px;
+    text-decoration: none;
+  }
+}
