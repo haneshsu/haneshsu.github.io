@@ -22,7 +22,7 @@ body{
         img {
           width: 200px;
           height: auto;
-          /*@media screen and (min-width: 768px) {*/
+          /*@media screen and (min-width: 768px) {
             max-width: 200px;
             height: auto;
           /*}*/
@@ -31,10 +31,10 @@ body{
     }
     .nav-links {
       padding-right: 140px;
-      display: none;
+      display: block;
       width: 100%;
-      background-color: #DEF0FF;
-      /*@media screen and (min-width: 1250px) {*/
+      background-color: #FFF;
+      /*@media screen and (min-width: 1250px) {
         display: block;
         background-color: #FFF;
       /*}*/
