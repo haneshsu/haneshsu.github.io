@@ -11,10 +11,10 @@ body{
     position: sticky;
     top: 0;
     background-color: #FFF;
-    @media screen and (min-width: 1250px) {
+    /*@media screen and (min-width: 1250px) {*/
       justify-content: space-between;
       flex-direction: row;
-    }
+    /*}*/
     .nav-logo {
       align-self: flex-start;
       padding: 22px 140px 22px;
@@ -22,10 +22,10 @@ body{
         img {
           width: 200px;
           height: auto;
-          @media screen and (min-width: 768px) {
+          /*@media screen and (min-width: 768px) {*/
             max-width: 200px;
             height: auto;
-          }
+          /*}*/
         }
       }
     }
@@ -34,18 +34,19 @@ body{
       display: none;
       width: 100%;
       background-color: #DEF0FF;
-      @media screen and (min-width: 1250px) {
+      /*@media screen and (min-width: 1250px) {*/
         display: block;
         background-color: #FFF;
-      }
+      /*}*/
       ul {
         padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        @media screen and (min-width: 1250px) {
+        /*@media screen and (min-width: 1250px) {*/
           flex-direction: row;
-        }
+          flex-wrap: wrap;
+        /*}*/
         
         
         li {
@@ -111,6 +112,7 @@ body{
 }
 
 @media screen and (max-width: 860px){
+  
   .site-body .portfolio .portfolio-img{
     width: calc(100%);
     height: auto;
