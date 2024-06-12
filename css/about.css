@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+    padding: 0;
+  }
+  .site-header {
+      z-index: 10;
+      font-family: 'Roboto Condensed', sans-serif;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      position: sticky;
+      top: 0;
+      background-color: #FFF;
+      /*@media screen and (min-width: 1250px) {*/
+        justify-content: space-between;
+        flex-direction: row;
+      /*}*/
+      .nav-logo {
+        align-self: flex-start;
+        padding: 22px 140px 22px;
+        a {
+          img {
+            width: 200px;
+            height: auto;
+            /*@media screen and (min-width: 768px) {
+              max-width: 200px;
+              height: auto;
+            /*}*/
+          }
+        }
+      }
+      .nav-links {
+        padding-right: 140px;
+        display: block;
+        width: 100%;
+        background-color: #FFF;
+        /*@media screen and (min-width: 1250px) {
+          display: block;
+          background-color: #FFF;
+        /*}*/
+        ul {
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          /*@media screen and (min-width: 1250px) {*/
+            flex-direction: row;
+            flex-wrap: wrap;
+          /*}*/
+          
+          
+          li {
+            list-style: none;
+            a {
+              font-size: 16px;
+              text-transform: lowercase;
+              font-family: 400;
+              color: #000000;
+              letter-spacing: 1.2px;
+              padding: 10px 15px;
+              text-decoration: none;
+              display: block;
+            }
+          }
+          li:hover {
+            background-color: #ffffff;
+          }
+        }
+      }
+    }
+    .nav-links.active {
+      display: block;
+    }
+
+    .site-footer{
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding-right: 124px;
+          overflow: hidden;
+          background-color: #ffffff;
+          padding-top: 22px;
+          padding-bottom: 22px;
+        }
+        
+        li {
+          float: right;
+          align-items: center;
+        }
+        
+        li a {
+          align-items: center;
+          display: inline;
+          color: white;
+          text-align: center;
+          padding-left: 20px;
+          padding-top: 37px;
+          text-decoration: none;
+        }
+      }
+
+.body{
+  padding: 0;
+  margin: 0;
+}
+
+.about-body{
+  position: relative;
+  margin-top: -20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: auto;
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+.about-body .about-container{
+  margin: auto;
+  position: relative;
+  height: auto;
+  width: calc(100% - 280px);
+  display: flex;
+  flex-wrap: wrap;
+}
