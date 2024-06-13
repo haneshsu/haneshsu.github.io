@@ -51,7 +51,7 @@ body{
     /*}*/
     .nav-logo {
       align-self: flex-start;
-      padding: 22px 140px 22px;
+      padding: 22px 0px 22px 140px;
       a {
         img {
           width: 200px;

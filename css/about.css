@@ -44,14 +44,14 @@ body{
       flex-direction: column;
       position: sticky;
       top: 0;
-      background-color: #FFF;
+      background-color: #ffffff;
       /*@media screen and (min-width: 1250px) {*/
         justify-content: space-between;
         flex-direction: row;
       /*}*/
       .nav-logo {
         align-self: flex-start;
-        padding: 22px 140px 22px;
+        padding: 22px 65px 22px 140px;
         a {
           img {
             width: 200px;
@@ -67,7 +67,7 @@ body{
         padding-right: 140px;
         display: block;
         width: 100%;
-        background-color: #FFF;
+        background-color: #ffffff;
         /*@media screen and (min-width: 1250px) {
           display: block;
           background-color: #FFF;
@@ -164,6 +164,9 @@ body{
 
 .about-body .about-container .about-img{
   width: 50%;
+  margin-left: 100px;
+  float: left;
+  clear: right;
 }
 
 .about-body .about-container .about-img img{
@@ -197,15 +200,15 @@ height: auto;
   background-color: #101010;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 825px) {
   .nav-menu {
       position: fixed;
       left: -100%;
       top: 5rem;
       flex-direction: column;
-      background-color: #fff;
+      background-color: #ffffff;
       width: 100%;
-      border-radius: 10px;
+      border-radius:0px;
       text-align: center;
       transition: 0.3s;
       box-shadow:
@@ -214,10 +217,13 @@ height: auto;
 
   .nav-menu.active {
       left: 0;
+      margin-top: 45px;
+      background-color: #ffffff;
+      
   }
 
   .nav-item {
-      margin: 2.5rem 0;
+      margin: 10px;
   }
 
   .hamburger {
