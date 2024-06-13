@@ -1,3 +1,37 @@
+@font-face {
+  font-family: Soleil;
+  src: url(/fonts/Soleil/SoleilRegular.otf);
+}
+
+@font-face {
+  font-family: Soleil;
+  src: url(/fonts/Soleil/SoleilLight.otf);
+  font-weight: lighter;
+}
+
+@font-face {
+  font-family: Soleil;
+  src: url(/fonts/Soleil/SoleilBold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Brandon;
+  src: url(/fonts/Brandon/brandon-grotesque-regular.ttf);
+}
+
+@font-face {
+  font-family: Brandon;
+  src: url(/fonts/Brandon/brandon-grotesque-light.ttf);
+  font-weight: lighter;
+}
+
+h1{
+  font-family: Soleil;
+  font-weight: bold;
+  font-size: 30px;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -122,3 +156,30 @@ body{
   display: flex;
   flex-wrap: wrap;
 }
+
+.about-body .about-container .about-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-body .about-container .about-img{
+  width: 50%;
+}
+
+.about-body .about-container .about-img img{
+width: 200px;
+height: auto;
+}
+
+.about-body .about-container .about-text{
+  background-color: aqua;
+  width: 50%;
+}
+
+/*.eb-garamond-<garamond-font> {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}*/
+
