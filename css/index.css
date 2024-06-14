@@ -1,111 +1,156 @@
 @font-face {
-  font-family: Soleil;
-  src: url(/fonts/Soleil/SoleilRegular.otf);
+  font-family: "Soleil";
+  src: url(/fonts/Soleil/SoleilRegular.otf) format("opentype");
 }
 
 @font-face {
-  font-family: Soleil;
-  src: url(/fonts/Soleil/SoleilLight.otf);
+  font-family: "Soleil";
+  src: url(/fonts/Soleil/SoleilLight.otf) format("opentype");
   font-weight: lighter;
 }
 
 @font-face {
-  font-family: Soleil;
-  src: url(/fonts/Soleil/SoleilBold.otf);
+  font-family: "Soleil";
+  src: url(/fonts/Soleil/SoleilBold.otf) format("opentype");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: Brandon;
-  src: url(/fonts/Brandon/brandon-grotesque-regular.ttf);
+  font-family: "Brandon";
+  src: url(/fonts/Brandon/brandon-grotesque-regular.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: Brandon;
-  src: url(/fonts/Brandon/brandon-grotesque-light.ttf);
+  font-family: "Brandon";
+  src: url(/fonts/Brandon/brandon-grotesque-light.ttf) format("truetype");
   font-weight: lighter;
 }
 
-h1{
-  font-family: Soleil;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Soleil", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 30px;
 }
 
-body{
-  margin: 0;
-  padding: 0;
-}
+
+/* Navigation menu styling */
 .site-header {
-    z-index: 10;
-    font-family: Soleil;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: sticky;
-    top: 0;
-    background-color: #FFF;
-    /*@media screen and (min-width: 1250px) {*/
-      justify-content: space-between;
-      flex-direction: row;
-    /*}*/
-    .nav-logo {
-      align-self: flex-start;
-      padding: 22px 0px 22px 140px;
-      a {
-        img {
-          width: 200px;
-          height: auto;
-          /*@media screen and (min-width: 768px) {
-            max-width: 200px;
-            height: auto;
-          /*}*/
-        }
-      }
-    }
-    .nav-links {
-      padding-right: 140px;
-      display: block;
-      width: 100%;
-      background-color: #FFF;
-      /*@media screen and (min-width: 1250px) {
-        display: block;
-        background-color: #FFF;
-      /*}*/
-      ul {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        /*@media screen and (min-width: 1250px) {*/
-          flex-direction: row;
-          flex-wrap: wrap;
-        /*}*/
-        
-        
-        li {
-          list-style: none;
-          a {
-            font-size: 16px;
-            text-transform: lowercase;
-            font-family: 400;
-            color: #000000;
-            letter-spacing: 1.2px;
-            padding: 10px 15px;
-            text-decoration: none;
-            display: block;
-          }
-        }
-        li:hover {
-          background-color: #ffffff;
-        }
-      }
-    }
-  }
-  .nav-links.active {
-    display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+
+  padding: 22px 140px;
+}
+
+.nav-logo {
+  width: 200px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; /* This changes the space between your navigation tabs */
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.nav-item > a {
+  font-family: "Soleil", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-transform: lowercase;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  float: right;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+
+@media (max-width: 991.98px) {
+  .site-header {
+      padding: 24px 48px;
   }
 
+  .nav-menu {
+      flex-direction: column;
+
+      position: fixed;
+      top: 110px;
+      left: -100%;
+      
+      width: 100%;
+      padding-inline-start: 0;
+      padding: 32px 0;
+
+      text-align: center;
+      background-color: white;
+
+      transition: 0.5s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      -webkit-transform: translateY(8px) rotate(45deg);
+      transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      -webkit-transform: translateY(-8px) rotate(-45deg);
+      transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .nav-logo {
+      width: 150px;
+  }
+
+  .nav-menu {
+      top: 70px;
+  }
+}
+
+/* Body copy styling */  
 .site-body{
   position: relative;
   margin-top: -20px;
@@ -139,14 +184,17 @@ body{
   object-position: center;
 }
 
-@media screen and (max-width: 1290px){
+@media screen and (max-width: 991.98px){
+  .site-body .portfolio{
+    width: calc(100% - 96px)
+  }
   .site-body .portfolio .portfolio-img{
     width: calc(100% / 2);
     height: auto;
   }
 }
 
-@media screen and (max-width: 860px){
+@media screen and (max-width: 575.98px){
   
   .site-body .portfolio .portfolio-img{
     width: calc(100%);
@@ -154,62 +202,25 @@ body{
   }
 }
 
-/*.site-footer{
-  ul {
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    @media screen and (min-width: 1250px) {
-      flex-direction: row;
-    }
-    
-    
-    li {
-      list-style: none;
-      width: 10px;
-      a {
-        width: 32px;
-        text-transform: lowercase;
-        font-family: 400;
-        color: #000000;
-        letter-spacing: 1.2px;
-        padding-right: 140;
-        text-decoration: none;
-        display: block;
-      }
-    }
-    li:hover {
-      background-color: #ffffff;
-    }
-  }
-}
-*/
+/* Footer styling */
+/* If you want your icons to be reversed like your previous version, change the html order */
+.site-footer > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Change this value for the spaces between your icons */
+  justify-content: flex-end;
 
-.site-footer{
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding-right: 140px;
-    overflow: hidden;
-    background-color: #ffffff;
-    padding-top: 22px;
-    padding-bottom: 22px;
-  }
-  
-  li {
-    float: right;
-    align-items: center;
-  }
-  
-  li a {
-    align-items: center;
-    display: inline;
-    color: white;
-    text-align: center;
-    padding-left: 20px;
-    padding-top: 37px;
-    text-decoration: none;
-  }
+  padding-inline-start: 0;
+  margin-right: 140px;
 }
 
+.site-footer > ul > li {
+  list-style: none;
+}
+
+@media (max-width: 767.98px) {
+  .site-footer > ul {
+      justify-content: center;
+      margin-right: 0;
+  }
+}

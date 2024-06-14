@@ -181,6 +181,8 @@ h1 {
 }
 
 .about-text {
+  font-family: "Brandon", Arial, Helvetica, sans-serif;
+  font-size: 20px;
   margin: 0;
   padding: 0;
 }

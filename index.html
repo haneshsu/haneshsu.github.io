@@ -5,28 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanes Hsu | Industrial Designer</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="/js/hamburger.js" defer></script>
 </head>
+
 <body>
     <nav class="site-header">
-        <div class="nav-logo">
+        <div>
             <a href="index.html">
-                <img src="assets/Hanes Hsu Logo with name.png" width="60" height="auto">
+                <img class="nav-logo" src="../assets/Hanes Hsu Logo with name.png" width="60" height="auto">
             </a>
         </div>
-        <div class="nav-links">
-            <ul>
-                <li><a href="index.html">work.</a></li>
-                <li><a href="index.html">photography.</a></li>
-                <li><a href="html/about.html">about.</a></li>
-                <li><a href="/assets/HanesHsuResume.pdf" download>resume.</a></li>
-                <li><a href="index.html">contact.</a></li>
+        <div class="nav-links"> <!-- Doesn't have any styles on it right now -->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../index.html">work.</a></li>
+                <li class="nav-item"><a href="photo.html">photography.</a></li>
+                <li class="nav-item"><a href="about.html">about.</a></li>
+                <li class="nav-item"><a href="../assets/HanesHsuResume.pdf">resume.</a></li>
+                <li class="nav-item"><a href="contact.html">contact.</a></li>
             </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </nav>
+
+
     <div class="site-body">
         <div class="portfolio">
             <div class="portfolio-img">
@@ -43,20 +52,14 @@
             </div>
         </div>
     </div>
-    <nav class="site-footer">
+
+    
+    <footer class="site-footer">
         <ul>
-            <li><a href="mailto: hanes.hsu.design@outlook.com"><img src="assets/Mail Logo Small.png" 
-                width="auto"
-                height="32px"></a></li>
-            <li><a href="https://www.linkedin.com/in/hanes-hsu/"><img src="assets/LinkedIn Logo Small.png" 
-                width="32px"
-                height="auto"></a></li>
-            <li><a href="https://www.behance.net/hanes_hsu"><img src="assets/behance logo small.png" 
-                width="32px"
-                height="auto"></a></li>
+            <li><a href="mailto: hanes.hsu.design@outlook.com"><img src="../assets/Mail Logo Small.png" width="auto" height="32px"></a></li>
+            <li><a href="https://www.linkedin.com/in/hanes-hsu/"><img src="../assets/LinkedIn Logo Small.png" width="32px" height="auto"></a></li>
+            <li><a href="https://www.behance.net/hanes_hsu"><img src="../assets/behance logo small.png" width="32px" height="auto"></a></li>
         </ul>
-    </nav>
-    
-    
+    </footer>
 </body>
 </html>
