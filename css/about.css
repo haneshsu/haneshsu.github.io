@@ -1,189 +1,85 @@
 @font-face {
-  font-family: Soleil;
-  src: url(/fonts/Soleil/SoleilRegular.otf);
+  font-family: "Soleil";
+  src: url(/fonts/Soleil/SoleilRegular.otf) format("opentype");
 }
 
 @font-face {
-  font-family: Soleil;
-  src: url(/fonts/Soleil/SoleilLight.otf);
+  font-family: "Soleil";
+  src: url(/fonts/Soleil/SoleilLight.otf) format("opentype");
   font-weight: lighter;
 }
 
 @font-face {
-  font-family: Soleil;
-  src: url(/fonts/Soleil/SoleilBold.otf);
+  font-family: "Soleil";
+  src: url(/fonts/Soleil/SoleilBold.otf) format("opentype");
   font-weight: bold;
 }
 
 @font-face {
-  font-family: Brandon;
-  src: url(/fonts/Brandon/brandon-grotesque-regular.ttf);
+  font-family: "Brandon";
+  src: url(/fonts/Brandon/brandon-grotesque-regular.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: Brandon;
-  src: url(/fonts/Brandon/brandon-grotesque-light.ttf);
+  font-family: "Brandon";
+  src: url(/fonts/Brandon/brandon-grotesque-light.ttf) format("truetype");
   font-weight: lighter;
 }
 
-h1{
-  font-family: Soleil;
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Soleil", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 30px;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-  }
-  .site-header {
-      z-index: 10;
-      font-family: Soleil;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      position: sticky;
-      top: 0;
-      background-color: #ffffff;
-      /*@media screen and (min-width: 1250px) {*/
-        justify-content: space-between;
-        flex-direction: row;
-      /*}*/
-      .nav-logo {
-        align-self: flex-start;
-        padding: 22px 65px 22px 140px;
-        a {
-          img {
-            width: 200px;
-            height: auto;
-            /*@media screen and (min-width: 768px) {
-              max-width: 200px;
-              height: auto;
-            /*}*/
-          }
-        }
-      }
-      .nav-links {
-        padding-right: 140px;
-        display: block;
-        width: 100%;
-        background-color: #ffffff;
-        /*@media screen and (min-width: 1250px) {
-          display: block;
-          background-color: #FFF;
-        /*}*/
-        ul {
-          padding: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          /*@media screen and (min-width: 1250px) {*/
-            flex-direction: row;
-            flex-wrap: wrap;
-          /*}*/
-          
-          
-          li {
-            list-style: none;
-            a {
-              font-size: 16px;
-              text-transform: lowercase;
-              font-family: 400;
-              color: #000000;
-              letter-spacing: 1.2px;
-              padding: 10px 30px;
-              padding-right: 0px;
-              text-decoration: none;
-              display: block;
-            }
-          }
-          li:hover {
-            background-color: #ffffff;
-          }
-        }
-      }
-    }
-    .nav-links.active {
-      display: block;
-    }
 
-    .site-footer{
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding-right: 140px;
-          overflow: hidden;
-          background-color: #ffffff;
-          padding-top: 22px;
-          padding-bottom: 22px;
-        }
-        
-        li {
-          float: right;
-          align-items: center;
-        }
-        
-        li a {
-          align-items: center;
-          display: inline;
-          color: white;
-          text-align: center;
-          padding-left: 20px;
-          padding-top: 37px;
-          text-decoration: none;
-        }
-      }
 
-.body{
-  padding: 0;
-  margin: 0;
-}
 
-.about-body{
-  position: relative;
-  margin-top: -20px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  height: auto;
-  width: 100%;
-  background-color: #f3f3f3;
-}
 
-.about-body .about-container{
-  margin: auto;
-  position: relative;
-  height: auto;
-  width: 750px;
+/* Navigation menu styling */
+.site-header {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+
+  padding: 22px 140px;
 }
 
-.about-body .about-container .about-info{
+.nav-logo {
+  width: 200px;
+}
+
+.nav-menu {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 30px; /* This changes the space between your navigation tabs */
 }
 
-.about-body .about-container .about-img{
-  width: 50%;
+.nav-item {
+  list-style: none;
 }
 
-.about-body .about-container .about-img img{
-width: 350px;
-height: auto;
-float: right;
+.nav-item > a {
+  font-family: "Soleil", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: black;
+  text-transform: lowercase;
+  letter-spacing: 1.2px;
+  text-decoration: none;
 }
 
-.about-body .about-container .about-text{
-  width: 50%;
-}
-
-/*.eb-garamond-<garamond-font> {
-  font-family: "EB Garamond", serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-}*/
-
+/* Hamburger menu */
 .hamburger {
   display: none;
   float: right;
@@ -199,30 +95,32 @@ float: right;
   background-color: #101010;
 }
 
-@media only screen and (max-width: 825px) {
+
+@media (max-width: 991.98px) {
+  .site-header {
+      padding: 24px 48px;
+  }
+
   .nav-menu {
-      margin-top: 45px;
-      position: fixed;
-      left: -100%;
-      top: 5rem;
       flex-direction: column;
-      background-color: #ffffff;
+
+      position: fixed;
+      top: 110px;
+      left: -100%;
+      
       width: 100%;
-      border-radius:0px;
+      padding-inline-start: 0;
+      padding: 32px 0;
+
       text-align: center;
+      background-color: white;
+
       transition: 0.5s;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
   .nav-menu.active {
       left: 0;
-      margin-top: 45px;
-      background-color: #ffffff;
-  }
-
-  .nav-item {
-      margin: 10px;
   }
 
   .hamburger {
@@ -243,93 +141,104 @@ float: right;
       -webkit-transform: translateY(-8px) rotate(-45deg);
       transform: translateY(-8px) rotate(-45deg);
   }
-
-  .site-header .nav-links{
-    padding-right: 140px;
-        display: block;
-        width: 50px;
-  }
-
-/*.site-header .nav-logo img{
-  width: 100px;
-  height: auto;
-}*/
 }
 
-@media only screen and (max-width: 630px) {
-  .site-header {
-    z-index: 10;
-    font-family: Soleil;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    position: sticky;
-    top: 0;
-    background-color: #ffffff;
-    /*@media screen and (min-width: 1250px) {*/
-      justify-content: space-between;
-      flex-direction: row;
-    /*}*/
-    .nav-logo {
-      align-self: flex-start;
-      padding: 22px 0px 22px 50px;
-      a {
-        img {
-          width: 100px;
-          height: auto;
-          /*@media screen and (min-width: 768px) {
-            max-width: 200px;
-            height: auto;
-          /*}*/
-        }
-      }
-    }
+@media (max-width: 767.98px) {
+  .nav-logo {
+      width: 100px;
+  }
+
+  .nav-menu {
+      top: 70px;
   }
 }
 
-@media only screen and (max-width: 1040px) {
-  .about-body .about-container{
-    margin: auto;
-    position: relative;
-    height: auto;
-    width: 350px;
-    display: flex;
-    flex-wrap: wrap;
-  }
 
-  .about-body .about-container .about-info{
-    display: flex;
-    flex-wrap: wrap;
+
+
+
+/* Body copy styling */
+.about-body {
+  padding: 80px 0;
+  background-color: #f3f3f3;
+}
+
+.about-container {
+  margin: 0 auto;
+  width: 750px;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: row;
+  gap: 48px; /* Space between your about text and image */
+  align-items: flex-start;
+  width: 100%;
+}
+
+.about-text, .about-img {
+  width: 50%;
+}
+
+.about-text {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 991.98px) {
+  .about-body {
+      padding: 80px 100px;
   }
   
-  .about-body .about-container .about-img{
-    width: 50%;
-  }
-  
-  .about-body .about-container .about-img img{
-  width: 350px;
-  height: auto;
+  .about-container {
+      width: 100%;
   }
 
+  .about-info {
+      display: block;
+  }
+
+  .about-text {
+      margin-bottom: 24px;
+      width: 100%;
+  }
 }
 
-@media only screen and (max-width: 630px) {
-  .about-body .about-container{
-    margin: auto;
-    position: relative;
-    height: auto;
-    width: calc(100% - 50px);
-    display: flex;
-    flex-wrap: wrap;
+@media (max-width: 767.98px) {
+  .about-img {
+      width: 100%;
   }
-  .site-header .nav-links{
-    padding-right: 50px;
-        display: block;
-        width: 50px;
-  }
+}
 
-  .site-footer{
-    ul {
-      padding-right: 50px;
-    }
+@media (max-width: 575.98px) {
+  .about-body {
+      padding: 48px;
+  }
+}
+
+
+
+
+
+/* Footer styling */
+/* If you want your icons to be reversed like your previous version, change the html order */
+.site-footer > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Change this value for the spaces between your icons */
+  justify-content: flex-end;
+
+  padding-inline-start: 0;
+  margin-right: 140px;
+}
+
+.site-footer > ul > li {
+  list-style: none;
+}
+
+@media (max-width: 767.98px) {
+  .site-footer > ul {
+      justify-content: center;
+      margin-right: 0;
+  }
 }
