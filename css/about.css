@@ -91,7 +91,8 @@ body{
               font-family: 400;
               color: #000000;
               letter-spacing: 1.2px;
-              padding: 10px 15px;
+              padding: 10px 30px;
+              padding-right: 0px;
               text-decoration: none;
               display: block;
             }
@@ -110,7 +111,7 @@ body{
         ul {
           list-style-type: none;
           margin: 0;
-          padding-right: 124px;
+          padding-right: 140px;
           overflow: hidden;
           background-color: #ffffff;
           padding-top: 22px;
@@ -152,7 +153,7 @@ body{
   margin: auto;
   position: relative;
   height: auto;
-  width: calc(100% - 280px);
+  width: 750px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -164,18 +165,15 @@ body{
 
 .about-body .about-container .about-img{
   width: 50%;
-  margin-left: 100px;
-  float: left;
-  clear: right;
 }
 
 .about-body .about-container .about-img img{
-width: 200px;
+width: 350px;
 height: auto;
+float: right;
 }
 
 .about-body .about-container .about-text{
-  background-color: aqua;
   width: 50%;
 }
 
@@ -188,6 +186,7 @@ height: auto;
 
 .hamburger {
   display: none;
+  float: right;
 }
 
 .bar {
@@ -202,6 +201,7 @@ height: auto;
 
 @media only screen and (max-width: 825px) {
   .nav-menu {
+      margin-top: 45px;
       position: fixed;
       left: -100%;
       top: 5rem;
@@ -210,7 +210,7 @@ height: auto;
       width: 100%;
       border-radius:0px;
       text-align: center;
-      transition: 0.3s;
+      transition: 0.5s;
       box-shadow:
           0 10px 27px rgba(0, 0, 0, 0.05);
   }
@@ -219,7 +219,6 @@ height: auto;
       left: 0;
       margin-top: 45px;
       background-color: #ffffff;
-      
   }
 
   .nav-item {
@@ -244,4 +243,93 @@ height: auto;
       -webkit-transform: translateY(-8px) rotate(-45deg);
       transform: translateY(-8px) rotate(-45deg);
   }
+
+  .site-header .nav-links{
+    padding-right: 140px;
+        display: block;
+        width: 50px;
+  }
+
+/*.site-header .nav-logo img{
+  width: 100px;
+  height: auto;
+}*/
+}
+
+@media only screen and (max-width: 630px) {
+  .site-header {
+    z-index: 10;
+    font-family: Soleil;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    /*@media screen and (min-width: 1250px) {*/
+      justify-content: space-between;
+      flex-direction: row;
+    /*}*/
+    .nav-logo {
+      align-self: flex-start;
+      padding: 22px 0px 22px 50px;
+      a {
+        img {
+          width: 100px;
+          height: auto;
+          /*@media screen and (min-width: 768px) {
+            max-width: 200px;
+            height: auto;
+          /*}*/
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .about-body .about-container{
+    margin: auto;
+    position: relative;
+    height: auto;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .about-body .about-container .about-info{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .about-body .about-container .about-img{
+    width: 50%;
+  }
+  
+  .about-body .about-container .about-img img{
+  width: 350px;
+  height: auto;
+  }
+
+}
+
+@media only screen and (max-width: 630px) {
+  .about-body .about-container{
+    margin: auto;
+    position: relative;
+    height: auto;
+    width: calc(100% - 50px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .site-header .nav-links{
+    padding-right: 50px;
+        display: block;
+        width: 50px;
+  }
+
+  .site-footer{
+    ul {
+      padding-right: 50px;
+    }
 }
