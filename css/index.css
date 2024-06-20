@@ -159,7 +159,6 @@ h1 {
   height: auto;
   width: 100%;
   background-color: #f3f3f3;
-
 }
 
 .site-body .portfolio{
@@ -182,6 +181,35 @@ h1 {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.portfolio-img .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: inherit;
+  aspect-ratio: 1 / 1.006;
+  opacity: 0;
+  transition: .5s ease;
+  background:rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-img:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 @media screen and (max-width: 991.98px){
