@@ -117,7 +117,7 @@ h1 {
     gap: 20px; /* Change this value for the spaces between your icons */
     justify-content: flex-end;
 
-    padding-inline-start: 0;
+    /* padding-inline-start: 0; */
     margin-right: 140px;
 }
 
