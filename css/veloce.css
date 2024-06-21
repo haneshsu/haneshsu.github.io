@@ -46,11 +46,11 @@ h1 {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.project-body {
+/* .project-body {
     margin: 0 auto;
-    /*display: flex;*/
+    display: flex;
     flex-direction: row;
-    gap: 48px; /* Space between your about text and image */
+    gap: 48px;
     align-items: flex-start;
     width: 100%;
     background-color: bisque;
@@ -66,6 +66,16 @@ h1 {
 .project-body .section-text {
     background-color: aquamarine;
     width: 70%;
+} */
+
+.project-body {
+    display: flex;
+    flex-direction: row;
+}
+
+.section-heading,
+.section-text {
+    width: 50%;
 }
 
 @media (max-width: 991.98px) {
