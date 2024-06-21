@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Soleil";
+    src: url(/fonts/Soleil/SoleilRegular.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Soleil";
+    src: url(/fonts/Soleil/SoleilLight.otf) format("opentype");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: "Soleil";
+    src: url(/fonts/Soleil/SoleilBold.otf) format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Brandon";
+    src: url(/fonts/Brandon/brandon-grotesque-regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Brandon";
+    src: url(/fonts/Brandon/brandon-grotesque-light.ttf) format("truetype");
+    font-weight: lighter;
+}
