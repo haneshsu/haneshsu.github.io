@@ -1,0 +1,27 @@
+/* Footer styling */
+/* If you want your icons to be reversed like your previous version, change the html order */
+
+.site-footer {
+    margin: 1rem 0;
+}
+
+.site-footer > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Change this value for the spaces between your icons */
+    justify-content: flex-end;
+
+    padding-inline-start: 0;
+    margin-right: 140px;
+}
+
+.site-footer > ul > li {
+    list-style: none;
+}
+
+@media (max-width: 767.98px) {
+    .site-footer > ul {
+        justify-content: center;
+        margin-right: 0;
+    }
+}
