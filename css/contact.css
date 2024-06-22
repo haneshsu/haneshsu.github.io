@@ -158,72 +158,41 @@
   
   
   /* Body copy styling */
-  
-  .site-body {
+  .contact-body {
     padding: 80px 0;
     background-color: #f3f3f3;
   }
   
-  .site-container {
+  .contact-container {
     margin: 0 auto;
-    width: 950px;
+    width: 750px;
   }
-
-
-.hero{
-    margin-bottom: 300px;
-}
-
-.hero-img{
+  
+  .about-info {
+    display: flex;
+    flex-direction: row;
+    gap: 48px; /* Space between your about text and image */
+    align-items: flex-start;
     width: 100%;
-    height: auto;
-}
-
-.project-description-container{
-    z-index: 10;
-    position: absolute;
-    top: 60%;
-}
-
-.project-description{
-    margin-left: 60px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 30px;
-    background-color: #ffffff;
-    width: 350px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.project-body{
-  margin: 0 auto;
-  /*display: flex;*/
-  flex-direction: row;
-  gap: 48px; /* Space between your about text and image */
-  align-items: flex-start;
-  width: 100%;
-  background-color: bisque;
-}
-
-.project-body .section-heading{
-  padding-left: 55px;
-  width: 30%;
-  background-color: aqua;
-  align: top;
-}
-
-.project-body .section-text{
-  background-color: aquamarine;
-  width: 70%;
-}
-
-
+  }
+  
+  .about-text, .about-img {
+    width: 50%;
+  }
+  
+  .about-text {
+    font-family: "Brandon", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
   @media (max-width: 991.98px) {
-    .about-body {
+    .contact-body {
         padding: 80px 100px;
     }
     
-    .about-container {
+    .contact-container {
         width: 100%;
     }
   
@@ -244,7 +213,7 @@
   }
   
   @media (max-width: 575.98px) {
-    .about-body {
+    .contact-body {
         padding: 48px;
     }
   }
