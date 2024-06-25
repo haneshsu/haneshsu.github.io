@@ -25,3 +25,29 @@
     src: url(/fonts/Brandon/brandon-grotesque-light.ttf) format("truetype");
     font-weight: lighter;
 }
+
+h1 {
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+h2{
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+h3{
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 16px;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+p{
+    font-family: "Brandon", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    line-height: 1.2;
+}
