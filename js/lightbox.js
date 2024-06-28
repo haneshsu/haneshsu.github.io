@@ -1,3 +1,5 @@
+var slideIndex = 1;
+
 function openLightbox(lightboxId) {
   document.getElementById(lightboxId).style.display = 'block';
 }
