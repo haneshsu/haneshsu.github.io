@@ -24,6 +24,7 @@ body {
     width: 100%;
     height: auto;
     z-index: -1;
+    margin-bottom: 30px;
 }
 
 .project-description-container {
@@ -83,6 +84,12 @@ body {
 .section-title{
   width: 100%;
   margin-bottom: 60px;
+}
+
+.img-left,
+.img-right{
+    width: 50%;
+    overflow: hidden;
 }
 
 @media (max-width: 991.98px) {

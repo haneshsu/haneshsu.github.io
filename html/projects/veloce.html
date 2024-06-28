@@ -13,8 +13,10 @@
     <link rel="stylesheet" href="../../css/nav.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/veloce.css">
+    <link rel="stylesheet" href="../../css/lightbox.css">
 
     <script src="/js/hamburger.js" defer></script>
+    <script src="/js/lightbox.js" defer></script>
 </head>
 
 <body>
@@ -175,23 +177,111 @@
 
             <div id="issues-with-gear" class="sections">
                 <div class="section-title">
-                    <h4>issues with gear.</h4>
+                    <h4>issues with gear organization.</h4>
                 </div>
                 <div class="project-body">
                     <div class="section-heading">
-                        <h2>hi</h2>
+                        <h2>abundance of gear.</h2>
                     </div>
                     <div class="section-text">
-                        <p>bye</p>
+                        <p>Carrying all your gear around the climbing gym can be quite challenging due to the sheer volume of equipment, including spare climbing shoes, chalk bags, climbing tape, chalk brushes, and water bottles. The to manage and transport the abundance of gear often lead to climbers forgetting and leaving items scattered around the mats, creating safety hazard as well as a disorganized environment. Loose gear left unattended can be come a hazard for other climbers, causing injury if fallen on or tripped over. Therefore, keeping gear organized is crucial for maintaining a safe climbing environment. 
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="../../assets/veloce/gear-issue.jpg" onclick="openLightbox('lightbox1');toSlide(1, 'lightbox1')" class="hover-shadow preview">
+                    </div>
+                </div>
+                
+                <div id="lightbox1" class="modal">
+                    <span class="close pointer" onclick="closeLightbox('lightbox1')">&times;</span>
+                    <div class="modal-content">
+                        <div class="slide">
+                            <img src="../../assets/veloce/gear-1.jpg" class="image-slide"/>
+                        </div>
+                        <div class="slide">
+                            <img src="../../assets/veloce/gear-2.jpg" class="image-slide" />
+                        </div>
+                        <a class="previous" onclick="changeSlide(-1, 'lightbox1')">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1, 'lightbox1')">&#10095;</a>
+                        <div class="dots">
+                            <div class="col">
+                                <img src="../../assets/veloce/gear-1.jpg" class="modal-preview hover-shadow" onclick="toSlide(1, 'lightbox1')">
+                            </div>
+                            <div class="col">
+                                <img src="../../assets/veloce/gear-2.jpg" class="modal-preview hover-shadow" onclick="toSlide(2, 'lightbox1')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-body">
+                    <div class="section-heading">
+                        <h2>brushes.</h2>
+                    </div>
+                    <div class="section-text">
+                        <p>The chalk brush holders typically use elastic loops to secure the brushes. However, they are often designed for specific brushes, causing brushes with handles of other sizes to be too loose or too tightly secured. This leads to inconvenience when removing and attaching the brushes from the chalk bag, which is the primary reason climber leave their brushes lying unattended on the mats.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <img src="../../assets/veloce/brush-holder.jpg" onclick="openLightbox('lightbox2');toSlide(1, 'lightbox2')" class="hover-shadow preview">
+                    </div>
+                </div>
+                
+                <div id="lightbox2" class="modal">
+                    <span class="close pointer" onclick="closeLightbox('lightbox2')">&times;</span>
+                    <div class="modal-content">
+                        <div class="slide">
+                            <img src="../../assets/veloce/brush-loop.png" class="image-slide"/>
+                        </div>
+                        <div class="slide">
+                            <img src="../../assets/veloce/brush-loop-2.jpg" class="image-slide" />
+                        </div>
+                        <div class="slide">
+                            <img src="../../assets/veloce/bruhs-loop-3.jpg" class="image-slide" />
+                        </div>
+                        <a class="previous" onclick="changeSlide(-1, 'lightbox2')">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1, 'lightbox2')">&#10095;</a>
+                        <div class="dots">
+                            <div class="col">
+                                <img src="../../assets/veloce/brush-loop.png" class="modal-preview hover-shadow" onclick="toSlide(1, 'lightbox2')">
+                            </div>
+                            <div class="col">
+                                <img src="../../assets/veloce/brush-loop-2.jpg" class="modal-preview hover-shadow" onclick="toSlide(2, 'lightbox2')">
+                            </div>
+                            <div class="col">
+                                <img src="../../assets/veloce/bruhs-loop-3.jpg" class="modal-preview hover-shadow" onclick="toSlide(3, 'lightbox2')">
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
+                <div class="project-body">
+                    <div class="img-left">
+                        <img src="../../assets/veloce/brush-loop.gif">
+                    </div>
+                    <div class="img-right">
+                        <img src="../../assets/veloce/brush-loop-2.gif">
+                    </div>
+                </div>
+
+                <div class="project-body">
+                    <div class="section-title">
+                        <h2>summary.</h2>
+                    </div>
+                    <div class="section-text">
+                        <p></p>
+                    </div>
+                </div>
+
             </div>
 
-
-
-
+            
         </div>
     </div>
 
