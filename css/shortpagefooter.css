@@ -1,0 +1,79 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    /* Adjust your site-header styling if necessary */
+}
+
+.about-body {
+    flex: 1; /* This will make the about-body take all the remaining space */
+}
+
+.about-container {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.site-footer {
+    margin: 1rem 0;
+    background-color: #fffffff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.site-footer > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Change this value for the spaces between your icons */
+    justify-content: flex-end;
+    padding-inline-start: 0;
+    margin-right: 140px;
+}
+
+.site-footer > ul > li {
+    list-style: none;
+}
+
+@media (max-width: 767.98px) {
+    .site-footer > ul {
+        justify-content: center;
+        margin-right: 0;
+    }
+}
+
+/* Media query to center the image between 767.98px and 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .about-info {
+        align-items: center;
+    }
+    .about-img {
+        margin: 0 auto;
+    }
+}
