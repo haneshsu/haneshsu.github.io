@@ -17,24 +17,24 @@ body {
 }
 
 .hero {
+    position: relative;
     margin-bottom: 350px;
 }
 
 .hero-img {
     width: 100%;
     height: auto;
-    z-index: -1;
     margin-bottom: 30px;
 }
 
 .project-description-container {
-    z-index: 0;
     position: absolute;
-    top: 60%;
+    top: 113%; /* Adjust this value to move the caption up or down */
+    left: 10%; /* Adjust this value to move the caption left or right */
+    transform: translateY(-50%); /* This will center the container vertically */
 }
 
 .project-description {
-    margin-left: 60px;
     padding: 30px;
     background-color: #ffffff;
     width: 400px;
