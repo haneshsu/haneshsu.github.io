@@ -1,7 +1,11 @@
-var slideIndex = 1;
+let slideIndex = {};
 
 function openLightbox(lightboxId) {
   document.getElementById(lightboxId).style.display = 'block';
+  if (!slideIndex[lightboxId]) {
+    slideIndex[lightboxId] = 1;
+  }
+  showSlide(slideIndex[lightboxId], lightboxId);
 }
 
 function closeLightbox(lightboxId) {
@@ -9,11 +13,11 @@ function closeLightbox(lightboxId) {
 }
 
 function changeSlide(n, lightboxId) {
-  showSlide(slideIndex += n, lightboxId);
+  showSlide(slideIndex[lightboxId] += n, lightboxId);
 }
 
 function toSlide(n, lightboxId) {
-  showSlide(slideIndex = n, lightboxId);
+  showSlide(slideIndex[lightboxId] = n, lightboxId);
 }
 
 function showSlide(n, lightboxId) {
@@ -21,20 +25,20 @@ function showSlide(n, lightboxId) {
   const modalPreviews = document.querySelectorAll(`#${lightboxId} .modal-preview`);
 
   if (n > slides.length) {
-    slideIndex = 1;	
+    slideIndex[lightboxId] = 1;	
   }
   
   if (n < 1) {
-    slideIndex = slides.length;
+    slideIndex[lightboxId] = slides.length;
   }
 
   for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    slides[i].style.display = "none";
   }
   for (let i = 0; i < modalPreviews.length; i++) {
-      modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
+    modalPreviews[i].className = modalPreviews[i].className.replace(' active', '');
   }
   
-  slides[slideIndex - 1].style.display = 'block';
-  modalPreviews[slideIndex - 1].className += ' active';
+  slides[slideIndex[lightboxId] - 1].style.display = 'block';
+  modalPreviews[slideIndex[lightboxId] - 1].className += ' active';
 }
