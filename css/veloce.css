@@ -93,56 +93,71 @@ body {
     overflow: hidden;
 }
 
+@media (max-width: 1221.98px){
+    .site-container{
+        width: 530px;
+    }
+    
+    .project-body{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-text, .section-heading{
+        width: 100%;
+    }
+
+    .img-left,
+    .img-right{
+        flex-direction: column;
+        width: 100%;
+    }
+    
+}
+
 @media (max-width: 991.98px) {
-    .about-body {
-        padding: 80px 100px;
-    }
-
-    .about-container {
-        width: 100%;
-    }
-
-    .about-info {
-        display: block;
-    }
-
-    .about-text {
-        margin-bottom: 24px;
-        width: 100%;
-    }
+    
 }
 
 @media (max-width: 767.98px) {
-    .about-img {
-        width: 100%;
-    }
+    
 }
 
 @media (max-width: 575.98px) {
-    .about-body {
-        padding: 48px;
+    .site-container{
+        width: 300px;
+    }
+
+    .hero{
+        margin-bottom: 420px;
+    }
+
+    .project-description-container {
+        position: absolute;
+        top: 180%; /* Adjust this value to move the caption up or down */
+        left: 0%; /* Adjust this value to move the caption left or right */
+        transform: translateY(-50%); /* This will center the container vertically */
+    }
+    
+    .project-description {
+        padding: 30px;
+        background-color: #ffffff;
+        width: 300px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .sections{
+        margin-bottom: 50px;
+    }
+
+    .img-left,
+    .img-right{
+        flex-direction: column;
+    }
+
+    .gifs{
+        width: 100%;
     }
 }
 
-/* Footer styling */
-/* If you want your icons to be reversed like your previous version, change the html order */
-.site-footer > ul {
-    display: flex;
-    flex-direction: row;
-    gap: 20px; /* Change this value for the spaces between your icons */
-    justify-content: flex-end;
 
-    /* padding-inline-start: 0; */
-    margin-right: 140px;
-}
-
-.site-footer > ul > li {
-    list-style: none;
-}
-
-@media (max-width: 767.98px) {
-    .site-footer > ul {
-        justify-content: center;
-        margin-right: 0;
-    }
-}

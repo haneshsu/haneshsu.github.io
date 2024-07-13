@@ -53,6 +53,12 @@ h4{
     margin-bottom: 30px;
 }
 
+h5{
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+}
+
 p{
     font-family: "Brandon", Arial, Helvetica, sans-serif;
     font-size: 18px;
