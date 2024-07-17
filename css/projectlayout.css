@@ -21,6 +21,11 @@ body {
     margin-bottom: 350px;
 }
 
+.hero-transfer {
+    position: relative;
+    margin-bottom: 350px;
+}
+
 .hero-img {
     width: 100%;
     height: auto;
@@ -28,6 +33,13 @@ body {
 }
 
 .project-description-container {
+    position: absolute;
+    top: 113%; /* Adjust this value to move the caption up or down */
+    left: 10%; /* Adjust this value to move the caption left or right */
+    transform: translateY(-50%); /* This will center the container vertically */
+}
+
+.project-description-container-transfer {
     position: absolute;
     top: 113%; /* Adjust this value to move the caption up or down */
     left: 10%; /* Adjust this value to move the caption left or right */
@@ -103,6 +115,24 @@ body {
         flex-direction: column;
     }
 
+    .project-description-container {
+        position: absolute;
+        top: 126%; /* Adjust this value to move the caption up or down */
+        left: 10%; /* Adjust this value to move the caption left or right */
+        transform: translateY(-50%); /* This will center the container vertically */
+    }
+
+    .project-description-container-transfer {
+        position: absolute;
+        top: 142%; /* Adjust this value to move the caption up or down */
+        left: 0%; /* Adjust this value to move the caption left or right */
+        transform: translateY(-50%); /* This will center the container vertically */
+    }
+
+    .hero-transfer{
+        margin-bottom: 370px;
+    }
+
     .section-text, .section-heading{
         width: 100%;
     }
@@ -132,9 +162,20 @@ body {
         margin-bottom: 420px;
     }
 
+    .hero-transfer{
+        margin-bottom: 510px;
+    }
+
     .project-description-container {
         position: absolute;
         top: 180%; /* Adjust this value to move the caption up or down */
+        left: 0%; /* Adjust this value to move the caption left or right */
+        transform: translateY(-50%); /* This will center the container vertically */
+    }
+
+    .project-description-container-transfer {
+        position: absolute;
+        top: 220%; /* Adjust this value to move the caption up or down */
         left: 0%; /* Adjust this value to move the caption left or right */
         transform: translateY(-50%); /* This will center the container vertically */
     }
