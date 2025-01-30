@@ -19,6 +19,13 @@
     flex-wrap: wrap;
   }
 
+  .site-body .portfolio .portfolio-img {
+    width: calc(100% / 3);
+    height: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
   .site-body .portfolio .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
