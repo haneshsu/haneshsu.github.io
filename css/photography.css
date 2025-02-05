@@ -1,5 +1,71 @@
 
     /* Body copy styling */  
+
+    .site-body {
+      position: relative;
+      margin-top: -20px;
+      padding-top: 100px;
+      padding-bottom: 100px;
+      width: 100%;
+      background-color: #f3f3f3;
+  }
+  
+  .site-body .photography {
+      margin: auto;
+      position: relative;
+      width: calc(100% - 280px);
+      display: flex;
+      flex-wrap: wrap;
+  }
+  
+  /* Flexbox for vertical centering */
+  .site-body .photography .photography-project {
+      width: calc(100% / 2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;          /* Vertically centers image + text */
+      padding: 20px;
+      box-sizing: border-box;
+      overflow: hidden;
+      min-height: 500px;                /* Ensures consistent height */
+  }
+  
+  /* Center the photo horizontally */
+  .site-body .photography .photography-project-photo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 80%;
+      margin-bottom: 20px;
+  }
+  
+  /* Control image sizing */
+  .site-body .photography .photography-project-photo img {
+      width: auto;
+      max-width: 100%;
+      max-height: 400px;                /* Controls portrait height */
+      object-fit: contain;              /* Maintains aspect ratio */
+  }
+  
+  /* Consistent text styling */
+  .site-body .photography .project-text {
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+  }
+  
+  /* Adjust heading margins */
+  .site-body .photography .project-text h2,
+  .site-body .photography .project-text h3 {
+      margin: 5px 0;
+  }
+  
+  
+  
+  /*
   .site-body {
     position: relative;
     margin-top: -20px;
@@ -10,7 +76,7 @@
     background-color: #f3f3f3;
   }
   
-  .site-body .portfolio {
+  .site-body .photography {
     margin: auto;
     position: relative;
     height: auto;
@@ -19,52 +85,49 @@
     flex-wrap: wrap;
   }
 
-  .site-body .portfolio .portfolio-img {
-    width: calc(100% / 3);
+  .site-body .photography .photography-project {
+    width: calc(100% / 2);
     height: auto;
     position: relative;
     overflow: hidden;
   }
 
-  .site-body .portfolio .grid{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    padding: 20px;
-    overflow-x: hidden;
+  .site-body .photography .photography-project .photography-project-photo{
+    padding-top: 20%;
+    padding-bottom: 10%;
+    max-width: 60%;
+    height: auto;
+    margin: auto;
   }
 
-  .site-body .portfolio .grid .img{
+  .site-body .photography .photography-project .photography-project-photo a {
+    margin: auto;
+  }
+
+  .site-body .photography .photography-project .photography-project-photo img{
+    max-width: 100%;
+    height: auto;
+    
+    
+  }
+
+  .site-body .photography .project-text{
+    text-align: center;
+    padding-bottom: 10%;
+  }
+
+*/
+
+/*
+  .site-body .photography .photography-project a {
+    display: block;
     width: 100%;
-    min-height: 275px;
-    background-position: center;
-    background-size: cover;
+    height: 100%;
+    position: relative;
   }
+*/
 
-  .img:nth-child(1){
-    background-image: url(../assets/photography/1.JPG);
-  }
-  .img:nth-child(2){
-    background-image: url(2.jpg);
-  }
-  .img:nth-child(3){
-    background-image: url(3.jpg);
-  }
-  .img:nth-child(4){
-    background-image: url(4.jpg);
-  }
-  .img:nth-child(5){
-    background-image: url(5.jpg);
-  }
-  .img:nth-child(6){
-    background-image: url(6.jpg);
-  }
-  .img:nth-child(7){
-    background-image: url(7.jpg);
-  }
-  .img:nth-child(8){
-    background-image: url(8.jpg);
-  }
+
 
   
   
