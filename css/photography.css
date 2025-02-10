@@ -17,6 +17,23 @@
       display: flex;
       flex-wrap: wrap;
   }
+
+  .site-body .photography-highlight {
+    margin: auto;
+    position: relative;
+    height: auto;
+    width: calc(100% - 280px);
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .site-body .photography-highlight .img{
+    width: auto;
+    max-width: 80%;
+    max-height: 400px;                /* Controls portrait height */
+    object-fit: contain; 
+  }
   
   /* Flexbox for vertical centering */
   .site-body .photography .photography-project {
@@ -63,7 +80,8 @@
       margin: 5px 0;
   }
   
-  
+
+
   
   /*
   .site-body {
