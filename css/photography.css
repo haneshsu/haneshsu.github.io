@@ -1,7 +1,7 @@
 
     /* Body copy styling */  
 
-    .site-body {
+  .site-body {
       position: relative;
       margin-top: -20px;
       padding-top: 100px;
@@ -10,29 +10,27 @@
       background-color: #f3f3f3;
   }
   
-  .site-body .photography {
-      margin: auto;
-      position: relative;
-      width: calc(100% - 280px);
-      display: flex;
-      flex-wrap: wrap;
-  }
+  
 
   .site-body .photography-highlight {
+    padding-top: 20px;
+    width: calc(100% - 280px);
+    margin: auto;
+  }
+
+  .site-body .photography-highlight img {
+    width: 100%;
+    height: auto;
+    display: block; /* Removes extra space below inline images */
+    object-fit: cover; /* Ensures the image fills the container without stretching */
+  }
+
+  .site-body .photography {
     margin: auto;
     position: relative;
-    height: auto;
     width: calc(100% - 280px);
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px;
-  }
-
-  .site-body .photography-highlight .img{
-    width: auto;
-    max-width: 80%;
-    max-height: 400px;                /* Controls portrait height */
-    object-fit: contain; 
   }
   
   /* Flexbox for vertical centering */
@@ -73,6 +71,33 @@
       padding: 0;
       line-height: 1.5;
   }
+
+  /* New grid container to match highlight width */
+.site-body .photography-grid {
+  padding-top: 20px;
+  width: calc(100% - 280px);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adds spacing between rows and columns */
+}
+
+/* Each project takes 50% width to create rows of two */
+.site-body .photography-grid .photography-project {
+  width: calc(50% - 10px); /* Adjusts for gap spacing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Ensure images fit nicely */
+.site-body .photography-grid .photography-project-photo img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+}
   
   /* Adjust heading margins */
   .site-body .photography .project-text h2,
