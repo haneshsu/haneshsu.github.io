@@ -10,7 +10,10 @@
       background-color: #f3f3f3;
   }
   
-  
+  .site-body .camera-info {
+    padding-top: 200px;
+    text-align: center;
+  }
 
   .site-body .photography-highlight {
     padding-top: 20px;
@@ -249,6 +252,10 @@
     .site-body .portfolio .portfolio-img {
         width: 100%;
         height: auto;
+    }
+
+    .prev, .next {
+      color: white;
     }
   }
   
