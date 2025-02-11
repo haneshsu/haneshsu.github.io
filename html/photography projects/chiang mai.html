@@ -183,6 +183,14 @@
         </div>
 
 
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <a class="prev" id="prev">&#10094;</a>
+            <a class="next" id="next">&#10095;</a>
+        </div>
+
+        
     </div>
     
     <footer class="site-footer">
@@ -192,5 +200,68 @@
             <li><a href="https://www.behance.net/hanes_hsu"><img src="../../assets/behance logo small.png" width="32px" height="auto"></a></li>
         </ul>
     </footer>
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const closeBtn = document.querySelector(".close");
+            const prevBtn = document.getElementById("prev");
+            const nextBtn = document.getElementById("next");
+        
+            let images = document.querySelectorAll(".site-body img");
+            let imageArray = Array.from(images);
+            let currentIndex = 0;
+        
+            images.forEach((img, index) => {
+                img.addEventListener("click", function () {
+                    lightbox.style.display = "flex";
+                    lightboxImg.src = img.src;
+                    currentIndex = index;
+                });
+            });
+        
+            closeBtn.addEventListener("click", function () {
+                lightbox.style.display = "none";
+            });
+        
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    lightbox.style.display = "none";
+                } else if (e.key === "ArrowRight") {
+                    showNext();
+                } else if (e.key === "ArrowLeft") {
+                    showPrev();
+                }
+            });
+        
+            nextBtn.addEventListener("click", showNext);
+            prevBtn.addEventListener("click", showPrev);
+        
+            function showNext() {
+                currentIndex = (currentIndex + 1) % imageArray.length;
+                lightboxImg.src = imageArray[currentIndex].src;
+            }
+        
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+                lightboxImg.src = imageArray[currentIndex].src;
+            }
+        
+            lightbox.addEventListener("click", function (e) {
+                if (e.target === lightbox) {
+                    lightbox.style.display = "none";
+                }
+            });
+        });
+        </script>
+        
+
+
+
+
 </body>
 </html>
