@@ -175,14 +175,25 @@
   
   
   @media screen and (max-width: 991.98px) {
-    .site-body .portfolio {
+    .site-body .photography {
         width: calc(100% - 96px);
     }
-    .site-body .portfolio .portfolio-img {
+    .site-body .photography .photography-project {
         width: calc(100% / 2);
         height: auto;
     }
+    .site-body .photography-highlight {
+      width: calc(100% - 96px);
+    }
+    .site-body .photography-grid {
+      width: calc(100% - 96px);
+    }
+
+    .site-body {
+      padding-top: 20px;
+    }
   }
+
   
   @media screen and (max-width: 575.98px) {
     .site-body .portfolio .portfolio-img {
