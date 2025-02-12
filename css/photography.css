@@ -159,6 +159,27 @@
   color: #bbb;
 }
 
+a img {
+  transition: transform .5s ease;
+}
+
+a img:hover {
+  transform: scale(1.05);
+}
+
+.see-more {
+  color: inherit; /* Keeps the default text color */
+  text-decoration: none; /* Removes underline */
+}
+
+.see-more:hover {
+  color: #ff6600; /* Change to any hover color you prefer */
+}
+
+.see-more:visited {
+  color: inherit; /* Ensures the link does not change color after being clicked */
+}
+
 
   
   /*
