@@ -84,7 +84,7 @@ span:hover::before {
         flex-direction: column;
 
         position: fixed;
-        top: -107%;
+        top: -150%;
         left: 0;
 
         width: 100%;
@@ -101,7 +101,7 @@ span:hover::before {
 
     .nav-menu.active {
         left: 0;
-        top: 127px;
+        top: 107px;
     }
 
     .nav-item > a {
@@ -134,6 +134,6 @@ span:hover::before {
     }
 
     .nav-menu {
-        top: 100px;
+        top: -150%px;
     }
 }
