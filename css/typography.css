@@ -71,9 +71,15 @@ h7{
     font-size: 16px;
 }
 
+h8{
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
 
 p{
     font-family: "Brandon", Arial, Helvetica, sans-serif;
     font-size: 18px;
     line-height: 1.2;
 }
+
