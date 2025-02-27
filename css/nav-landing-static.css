@@ -1,0 +1,45 @@
+.static-nav {
+    position: absolute;
+    top: 19px;
+    right: 1%;
+    width: 44.1%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+}
+
+.landing-nav-logo {
+    display: flex;  /* Ensures it only takes space needed */
+    align-items: center; /* Aligns the image vertically */
+    justify-content: left ; /* Centers horizontally */
+    width: auto;
+    height: auto;
+    max-width: 38%; /* Adjust as needed */
+}
+
+
+.landing-nav-logo img {
+    width: 50%;
+}
+
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.nav-column {
+    display: flex;
+    flex-direction: column; /* Stacks links in a column */
+    gap: 10px; /* Space between each link */
+    margin-right: clamp(5%, 3vw, 50%);
+}
+
+.nav-column a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+ 

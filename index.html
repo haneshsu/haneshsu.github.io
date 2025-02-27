@@ -10,27 +10,50 @@
     
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/typography.css">
-    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/nav-landing-static.css">
+    <link rel="stylesheet" href="css/nav-dynamic.css">
+
+ 
+    
 
     <script src="/js/hamburger.js" defer></script>
 </head>
 
 <body>
-    <nav class="site-header">
+    <nav class="static-nav">
+        <div class="landing-nav-logo">
+            <a href="/index.html">
+                <img src="/assets/landing/Hanes Hsu Logo Vertical.png" alt="">
+            </a>
+        </div>
+        <div class="navigation">
+            <div class="nav-column">
+                <a href="./html/work.html"><h8><span>work.</span></h8></a>
+                <a href="./html/photography.html"><h8><span>photography.</span></h8></a>
+                <a href="./html/about.html"><h8><span>about.</span></h8></a>
+            </div>
+            <div class="nav-column">
+                <a href="./assets/HanesHsuResume.pdf"><h8><span>resume.</span></h8></a>
+                <a href="./html/contact.html"><h8><span>contact.</span></h8></a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="dynamic-nav">
         <div>
-            <a href="./index.html">
-                <img class="nav-logo" src="../assets/Hanes Hsu Logo with name.png" width="60" height="auto">
+            <a href="../index.html">
+                <img class="nav-logo" src="../assets/Hanes Hsu Logo with name.png">
             </a>
         </div>
         <div class="nav-links"> <!-- Doesn't have any styles on it right now -->
             <ul class="nav-menu">
-                <li class="nav-item"><a href="../index.html"><span>work.</span></a></li>
-                <li class="nav-item"><a href="./html/photography.html"><span>photography.</span></a></li>
-                <li class="nav-item"><a href="/html/about.html"><span>about.</span></a></li>
+                <li class="nav-item"><a href="../html/work.html"><span>work.</span></a></li>
+                <li class="nav-item"><a href="../html/photography.html"><span>photography.</span></a></li>
+                <li class="nav-item"><a href="../html/about.html"><span>about.</span></a></li>
                 <li class="nav-item"><a href="../assets/HanesHsuResume.pdf" target="_blank"><span>resume.</span></a></li>
-                <li class="nav-item"><a href="contact.html"><span>contact.</span></a></li>
+                <li class="nav-item"><a href="../html/contact.html"><span>contact.</span></a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -40,64 +63,42 @@
         </div>
     </nav>
 
+<!--testing-->
+    
+  
 
-    <div class="site-body">
-        <div class="portfolio">
-            <div class="portfolio-img">
-                <a href="/html/projects/veloce.html">
-                    <img src="assets/shoe-bag-hero-shot-IDA-Award.jpg">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h5>Veloce</h5>
-                            <h3>climbing gear collection.</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="portfolio-img">
-                <a href="/html/projects/transfer.html">
-                    <img src="assets/transfer-system-hero-shot.jpg">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h5>Dueling Dyads</h5>
-                            <h3>daily toilet transfer system.</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="portfolio-img">
-                <a href="#">
-                    <img src="assets/dyson pen hero shot.png">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h5>Dyson Pen</h5>
-                            <h3>visual brand language redesign</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="portfolio-img">
-                <a href="#">
-                    <img src="assets/lamp-hero-shot.jpg">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h5>Crimson Dissent</h5>
-                            <h3>lighting project</h3>
-                        </div>
-                    </div>
-                </a>
+    <div class="landing">
+        <div class="landing-photo">
+            <ul class="rotating">
+                <li class="image"><img src="assets/landing/veloce hero.jpg" alt=""></li>
+                <li class="image"><img src="assets/landing/hero2.jpg" alt=""></li>
+                <li class="image"><img src="assets/landing/hero3.jpg" alt=""></li>
+                <li class="image"><img src="assets/landing/hero4.jpg" alt=""></li>
+                <li class="image"><img src="assets/landing/hero5.jpg" alt=""></li>
+            </ul>
+            <!--
+            <img src="" alt="">
+            -->
+            
+            <div class="award-badge">
+                <img src="/assets/landing/ida.jpg" alt="IDA Design Awards Honorable Mention 2024">
             </div>
         </div>
+        
+        
+        <div class="landing-right">
+            
+
+            <div class="landing-text">
+                <h1>Veloce: <br> <strong>Bouldering Collection</strong></h1>
+                <p>Revolutionizing bouldering gear storage with innovative solutions to keep equipment clean, organized, and accessible.</p>
+                <a href="/html/projects/veloce.html" class="see-more">see more.</a>
+            </div>
+        </div>
+        
+    
     </div>
     
-
     
-    <footer class="site-footer">
-        <ul>
-            <li><a href="mailto: hanes.hsu.design@outlook.com"><img src="../assets/Mail Logo Small.png" width="auto" height="32px"></a></li>
-            <li><a href="https://www.linkedin.com/in/hanes-hsu/"><img src="../assets/LinkedIn Logo Small.png" width="32px" height="auto"></a></li>
-            <li><a href="https://www.behance.net/hanes_hsu"><img src="../assets/behance logo small.png" width="32px" height="auto"></a></li>
-        </ul>
-    </footer>
 </body>
 </html>

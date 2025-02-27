@@ -1,88 +1,259 @@
-
-
-/* Body copy styling */  
-.site-body {
-  position: relative;
-  margin-top: -20px;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  height: auto;
-  width: 100%;
-  background-color: #f3f3f3;
+/* Default: Show static-nav, hide site-header */
+.static-nav {
+    display: block ;
 }
 
-.site-body .portfolio {
-  margin: auto;
-  position: relative;
-  height: auto;
-  width: calc(100% - 280px);
-  display: flex;
-  flex-wrap: wrap;
+.dynamic-nav {
+    padding-top: -100px;
 }
 
-.site-body .portfolio .portfolio-img {
-  width: calc(100% / 3);
-  height: auto;
-  position: relative;
-  overflow: hidden;
+
+/*
+.landing .landing-photo img {
+    display: block;
+    width: auto;    /* Ensures natural width 
+    height: 100%;   /* Keeps it filling most of the screen height 
+    object-fit: cover; /* Ensures it fills the area 
+    margin-left: -100px;
 }
 
-.site-body .portfolio .portfolio-img a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
+*/
+
+.landing {
+    padding: 19px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 19px;
 }
 
-.site-body .portfolio .portfolio-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+
+
+.landing .landing-photo {
+    position: relative;  /* REQUIRED for absolute positioning */
+    width: 54%;
+    height: 96vh; 
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
-.portfolio-img .overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background: rgba(0, 0, 0, 0.3);
+/*infinite carousel*/
+
+
+.rotating .image{
+    position: absolute;
 }
 
-.portfolio-img:hover .overlay {
-  opacity: 1;
+.rotating .image img{
+    display: block;
+    width: auto;    /* Ensures natural width */
+    height: 96vh;   /* Keeps it filling most of the screen height */
+    object-fit: cover; /* Ensures it fills the area */
+    margin-left: -100px;
+    
+    
 }
 
-.overlay-text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+
+
+
+
+.rotating .image:nth-child(1) {
+    z-index: 5;
+    animation: fade 30s infinite;
 }
 
+.rotating .image:nth-child(2) {
+    z-index: 4;
+    animation: fade 30s 6s infinite;
+}
+
+.rotating .image:nth-child(3) {
+    z-index: 3;
+    animation: fade 30s 12s infinite;
+}
+
+.rotating .image:nth-child(4) {
+    z-index: 2;
+    animation: fade 30s 18s infinite;
+}
+
+.rotating .image:nth-child(5) {
+    z-index: 1;
+    animation: fade 30s 24s infinite;
+}
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    25% {
+        opacity: 0;
+        transform: scale(1.125);
+    }
+    100% {
+        opacity: 0;  /* Ensures it fully disappears before restarting */
+    }
+}
+
+.landing .landing-photo .award-badge {
+    position: absolute;
+    top: 5%;  
+    right: 5%; 
+    z-index: 10;
+}
+
+
+.landing .landing-photo .award-badge img {
+    max-width: 100px;  /* Fixed size for consistency */
+    height: auto;
+}
+
+
+
+
+/* add underline when hovering
+.nav-column a:hover {
+    text-decoration: underline;
+}
+*/
+
+.landing-text {
+    justify-content: end;
+    position: absolute;
+    bottom: 5cap;
+}
+
+
+/* See More Button */
+.see-more {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.see-more:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.nav-column > a {
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    text-transform: lowercase;
+    letter-spacing: 1.2px;
+    text-decoration: none;
+}
+
+
+/* nav underline interaction */
+span {
+    position: relative;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+span:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+
+
+/*adaptive sizing*/
 @media screen and (max-width: 991.98px) {
-  .site-body .portfolio {
-      width: calc(100% - 96px);
-  }
-  .site-body .portfolio .portfolio-img {
-      width: calc(100% / 2);
-      height: auto;
-  }
+    .static-nav {
+        display: none !important;
+    }
+
+    .dynamic-nav {
+        display: block;
+    }
+
+    .landing {
+        flex-direction: column;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .landing .landing-photo {
+        width: 100%;
+        height: 66vh;
+    }
+
+  
+    .rotating .image img {
+        margin-left: 0px;
+        width: auto;
+        height: 66vh;
+    }
+
+    
+
+  
+
+    .landing-text {
+        margin-top: 50px;
+        position: relative;
+    }
+
+    .landing .landing-photo .award-badge {
+        position: absolute;
+        top: 5%;  
+        right: 5%; 
+        z-index: 100;
+    }
+    
+
+
+
 }
+
+
 
 @media screen and (max-width: 575.98px) {
-  .site-body .portfolio .portfolio-img {
-      width: 100%;
-      height: auto;
-  }
+    .landing {
+        padding-top: 0px;
+    }
+    .landing .landing-photo {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .landing .landing-photo .award-badge img {
+        max-width: 70px;  /* Fixed size for consistency */
+        height: auto;
+    }
 }
-
-
