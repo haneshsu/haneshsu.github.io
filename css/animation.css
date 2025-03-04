@@ -1,0 +1,60 @@
+/* nav underline interaction */
+span {
+    position: relative;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    border-radius: 4px;
+    background-color: #18272F;
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+span:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+/* See More Button */
+.see-more {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.see-more:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.see-more-small {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.see-more-small :hover {
+    background-color: black;
+    color: white;
+}

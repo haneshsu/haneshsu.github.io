@@ -167,27 +167,13 @@
   transform: scale(1.05);
 }
 
-.see-more {
-  color: inherit; /* Keeps the default text color */
-  text-decoration: none; /* Removes underline */
-}
-
-.see-more:hover {
-  color: red; /* Change to any hover color you prefer */
-}
-
-.see-more:visited {
-  color: inherit; /* Ensures the link does not change color after being clicked */
-}
-
-
 
 @media screen and (max-width: 991.98px) {
     .site-body .photography {
         width: calc(100% - 96px);
     }
     .site-body .photography .photography-project {
-        width: calc(100% / 2);
+        width: calc(100% );
         height: auto;
     }
     .site-body .photography-highlight {
