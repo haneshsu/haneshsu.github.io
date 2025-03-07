@@ -1,9 +1,4 @@
 
-.animation-bg {
-    background-color: white;
-    height: 100vh;
-    width: 100%;
-}
 #logo-animation {
     position: fixed; /* Ensures it stays in place without affecting other elements */
     top: 50%; /* Adjust as needed */

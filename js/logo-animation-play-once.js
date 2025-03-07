@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
             renderer: "svg",
             loop: false,
             autoplay: true,
-            path: "/assets/landing/hanes_hsu_logo_animation_03062025.json" // Make sure this path is correct
+            path: "/assets/landing/2b_hanes_hsu_logo_animation_03062025.json" // Make sure this path is correct
         });
 
         // Once the animation is complete, hide the container
