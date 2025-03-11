@@ -21,6 +21,11 @@ body {
     margin-bottom: 350px;
 }
 
+.hero-test {
+    position: relative;
+    margin-bottom: 350px;
+}
+
 .hero-transfer {
     position: relative;
     margin-bottom: 350px;
@@ -33,6 +38,13 @@ body {
 }
 
 .project-description-container {
+    position: absolute;
+    top: 113%; /* Adjust this value to move the caption up or down */
+    left: 10%; /* Adjust this value to move the caption left or right */
+    transform: translateY(-50%); /* This will center the container vertically */
+}
+
+.project-description-container-test {
     position: absolute;
     top: 113%; /* Adjust this value to move the caption up or down */
     left: 10%; /* Adjust this value to move the caption left or right */
@@ -83,7 +95,7 @@ body {
 }
 
 .sections{
-  margin-bottom: 150px;
+    margin-bottom: 150px;
 }
 
 .section-heading{
@@ -95,8 +107,8 @@ body {
 }
 
 .section-title{
-  width: 100%;
-  margin-bottom: 60px;
+    width: 100%;
+    margin-bottom: 60px;
 }
 
 .img-left,
@@ -104,6 +116,26 @@ body {
     width: 50%;
     overflow: hidden;
 }
+
+
+.two-column {
+    margin-top: -200px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.two-column-img {
+    width: 50%;
+    gap: 10px;
+    
+}
+
+.two-column-img img {
+    width: 100%;
+}
+
 
 @media (max-width: 1221.98px){
     .site-container{
@@ -162,6 +194,10 @@ body {
         margin-bottom: 420px;
     }
 
+    .hero-test{
+        margin-bottom: 0px;
+    }
+
     .hero-transfer{
         margin-bottom: 510px;
     }
@@ -179,6 +215,12 @@ body {
         left: 0%; /* Adjust this value to move the caption left or right */
         transform: translateY(-50%); /* This will center the container vertically */
     }
+
+    .project-description-container-test {
+        position: static;
+        padding-top: 200px;
+    }
+
     
     .project-description {
         padding: 30px;
@@ -198,6 +240,13 @@ body {
 
     .gifs{
         width: 100%;
+    }
+
+    .two-column {
+        margin-top: -80px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
     }
 }
 
