@@ -84,7 +84,7 @@ span:hover::before {
         flex-direction: column;
 
         position: fixed;
-        top: -150%;
+        top: -350%;
         left: 0;
 
         width: 100%;
