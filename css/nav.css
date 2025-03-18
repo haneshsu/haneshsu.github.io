@@ -8,9 +8,13 @@
     z-index: 1;
     position: sticky;
     top: 0;
-    background-color: #ffffff;
+    
 
     padding: 22px 140px;
+
+    backdrop-filter: blur(20px);
+    background: transparent;
+    background: hsla(30, 33%, 99%, .2);
 }
 
 .nav-logo {
@@ -80,11 +84,12 @@ span:hover::before {
         padding: 24px 48px;
     }
 
+
     .nav-menu {
         flex-direction: column;
 
         position: fixed;
-        top: -350%;
+        top: -1000%;
         left: 0;
 
         width: 100%;
@@ -93,16 +98,26 @@ span:hover::before {
         padding: 32px 48px;
 
         text-align: left;
-        background-color: white;
+        
 
         transition: 0.5s;
-        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+
+
+        
     }
 
     .nav-menu.active {
         left: 0;
-        top: 107px;
+        top: 108px;
+        backdrop-filter: blur(20px);
+        background: transparent;
+        background: hsla(30, 33%, 99%, .5);
+        height: 100vh;
+        z-index: 999;
+        
     }
+
+    
 
     .nav-item > a {
         font-size: 24px;

@@ -12,7 +12,7 @@ h1 {
 /* Body copy styling */
 .about-body {
     padding: 80px 0;
-    background-color: #f3f3f3;
+    background-color: white;
 }
 
 .about-container {
@@ -111,7 +111,7 @@ body {
   /* Body copy styling */
   .contact-body {
     padding: 80px 0;
-    background-color: #f3f3f3;
+    background-color: white;
     height: 30vh;
     text-decoration: none;
   }
