@@ -18,7 +18,11 @@ h1 {
 .about-container {
     margin: 0 auto;
     width: 750px;
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
 }
+
 
 .about-info {
     display: flex;
@@ -33,12 +37,23 @@ h1 {
     width: 50%;
 }
 
+/* Normal scrolling text */
 .about-text {
     font-family: "Brandon", Arial, Helvetica, sans-serif;
     font-size: 20px;
     margin: 0;
     padding: 0;
     text-align: left;
+    width: 50%;
+}
+
+/* Image stays fixed until text finishes scrolling */
+.about-img {
+    width: 50%;
+    height: auto;
+    position: sticky;
+    top: 100px; /* Adjust this value based on how soon you want it to "stick" */
+    align-self: flex-start;
 }
 
 @media (max-width: 991.98px) {
