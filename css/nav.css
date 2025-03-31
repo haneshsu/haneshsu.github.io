@@ -42,8 +42,11 @@
 
 /* Hamburger menu */
 .hamburger {
-    display: none;
-    float: right;
+    visibility: hidden;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    
 }
 
 .bar {
@@ -82,16 +85,31 @@ span:hover::before {
 @media (max-width: 991.98px) {
     .site-header {
         padding: 24px 48px;
+        max-width: 100vw;
+        overflow-x: hidden;
+        flex-direction: column;
+        transition: 0.5s;
     }
 
+    
+
+    .nav-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
 
     .nav-menu {
         flex-direction: column;
-
         position: fixed;
-        top: -1000%;
-        left: 0;
-
+        visibility: hidden;
+        height: 0px;
+        overflow: hidden;
+        opacity: 0;
         width: 100%;
         height: 100%;
         padding-inline-start: 0;
@@ -106,14 +124,20 @@ span:hover::before {
         
     }
 
+
+
+    .site-header.active{
+        height: 100vh;
+    }
     .nav-menu.active {
         left: 0;
         top: 108px;
-        backdrop-filter: blur(20px);
-        background: transparent;
-        background: hsla(30, 33%, 99%, .9);
+        
         height: 100vh;
         z-index: 999;
+        visibility: visible;
+        height: auto;
+        opacity: 1;
         
     }
 
@@ -124,7 +148,10 @@ span:hover::before {
     }
 
     .hamburger {
-        display: block;
+        visibility: visible;
+        height: auto;
+        overflow: hidden;
+        opacity: 1;
         cursor: pointer;
     }
 

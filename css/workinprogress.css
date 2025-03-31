@@ -74,6 +74,7 @@
     padding: 22px 140px; /* Ensures consistent padding */
     background: transparent; /* Remove unwanted white background */
     z-index: 1000;
+    
 }
 
 .nav-logo {
@@ -153,6 +154,16 @@ span:hover::before {
         padding: 24px 48px;
     }
 
+    .nav-header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
     .nav-menu {
         flex-direction: column;
 
@@ -166,7 +177,7 @@ span:hover::before {
         padding: 32px 48px;
 
         text-align: left;
-        background-color: white;
+        background-color: none ;
 
         transition: 0.5s;
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
