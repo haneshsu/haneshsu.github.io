@@ -111,16 +111,16 @@ span:hover::before {
         overflow: hidden;
         opacity: 0;
         width: 100%;
-        height: 100%;
+        
         padding-inline-start: 0;
-        padding: 32px 48px;
-
+        
         text-align: left;
         
 
-        transition: 0.5s;
+        
 
-
+        top: inherit;
+        padding: 0;
         
     }
 
@@ -128,6 +128,7 @@ span:hover::before {
 
     .site-header.active{
         height: 100vh;
+        background: hsla(0, 20%, 99%, 0.104);
     }
     .nav-menu.active {
         left: 0;
@@ -138,6 +139,9 @@ span:hover::before {
         visibility: visible;
         height: auto;
         opacity: 1;
+        padding: 32px 48px;
+        
+        
         
     }
 
