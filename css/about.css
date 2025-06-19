@@ -117,27 +117,26 @@ h1 {
 
 
 
-  
 body {
     margin: 0;
     padding: 0;
-  }
+}
 
   /* Body copy styling */
-  .contact-body {
+.contact-body {
     padding: 80px 0;
     background-color: white;
     height: 30vh;
     text-decoration: none;
-  }
-  
-  .contact-container {
+}
+
+.contact-container {
     margin: 0 auto;
     width: 750px;
     text-decoration: none;
-  }
-  
-  .contacts {
+}
+
+.contacts {
     display: flex;
     flex-direction: row;
     gap: 48px; /* Space between your about text and image */
@@ -146,14 +145,14 @@ body {
     gap: 30px;
     margin-top: 20px;
     text-decoration: none;
-  }
-  
-  .contact-text{
+}
+
+.contact-text{
     margin: auto 0;
     text-decoration: none;
-  }
-  
-  @media (max-width: 991.98px) {
+}
+
+@media (max-width: 991.98px) {
     .contact-body {
         padding: 80px 100px;
     }
@@ -161,26 +160,26 @@ body {
     .contact-container {
         width: 100%;
     }
-  
+
     .about-info {
         display: block;
     }
-  
+
     .about-text {
         margin-bottom: 24px;
         width: 100%;
     }
-  }
-  
-  @media (max-width: 767.98px) {
+}
+
+@media (max-width: 767.98px) {
     .about-img {
         width: 100%;
     }
-  }
-  
-  @media (max-width: 575.98px) {
+}
+
+@media (max-width: 575.98px) {
     .contact-body {
         padding: 48px;
     }
-  }
-  
+}
+

@@ -76,6 +76,37 @@ h8{
     font-size: 20px;
 }
 
+h9{
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    text-decoration: none;
+    color: red;
+}
+
+h10{
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-style: italic;
+    text-decoration: none;
+    color: red;
+}
+
+h11{
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    
+    color: black;
+}
+
+h12{
+    font-family: "Soleil", Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 24px;
+    text-decoration: none;
+    color: black;
+}
 
 p{
     font-family: "Brandon", Arial, Helvetica, sans-serif;
