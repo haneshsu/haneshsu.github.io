@@ -4,7 +4,7 @@
 .site-body {
   position: relative;
   margin-top: -20px;
-  padding-top: 100px;
+  padding-top: 00px;
   padding-bottom: 100px;
   height: auto;
   width: 100%;
@@ -25,6 +25,12 @@
   height: auto;
   position: relative;
   overflow: hidden;
+  will-change: transform, opacity, filter;
+  transform-origin: center center;
+  transition:
+    opacity .35s ease,
+    transform .45s cubic-bezier(.22,.61,.36,1),
+  filter .35s ease;
 }
 
 .site-body .portfolio .portfolio-img a {
@@ -68,6 +74,68 @@
   text-align: center;
 }
 
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;                 /* <-- allow multiple rows */
+  gap: 0px 16px;                  /* row gap / column gap */
+  justify-content: flex-start;     /* align to left inside the gutter */
+  width: calc(100% - 280px);       /* match .site-body .portfolio */
+  margin: 40px auto 24px;   
+  justify-content: center;
+  margin: 40px auto 60px;
+}
+
+
+.filter-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: black;
+    color: white;
+}
+
+
+/* Smooth in/out for portfolio cards */
+.site-body .portfolio .portfolio-img {
+  transition:
+    opacity .35s ease,
+    transform .35s ease,
+    filter .35s ease;
+  will-change: opacity, transform, filter;
+}
+
+/* while we animate out */
+.portfolio-img.is-hiding {
+  opacity: 0;
+  transform: scale(.96) translateY(10px);
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+/* fully removed from layout after the hide animation finishes */
+.portfolio-img.is-hidden {
+  display: none;
+}
+
+/* optional: a tiny pop when showing */
+.portfolio-img.is-showing {
+  opacity: 0;
+  transform: scale(.98);
+  filter: blur(4px);
+}
+
+
 @media screen and (max-width: 991.98px) {
   .site-body .portfolio {
       width: calc(100% - 96px);
@@ -76,12 +144,27 @@
       width: calc(100% / 2);
       height: auto;
   }
+
+    .filter-buttons {
+    width: calc(100% - 96px);
+  }
+
 }
 
 @media screen and (max-width: 575.98px) {
   .site-body .portfolio .portfolio-img {
       width: 100%;
       height: auto;
+  }
+
+  .filter-buttons {
+    width: 80%;
+    padding: 0 0;                  /* optional: add side padding if you like */
+    justify-content: center;       /* optional: center on very small screens */
+  }
+
+  .filter-btn{
+    font-size: 12px;
   }
 }
 

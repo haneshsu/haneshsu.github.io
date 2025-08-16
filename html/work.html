@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="../css/animation.css">
 
     <script src="/js/hamburger.js" defer></script>
+    
+    <script src="/js/workfilterfade.js"></script>
 </head>
+
+
 
 <body>
     <nav class="site-header">
@@ -44,9 +48,17 @@
 
 
     <div class="site-body">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="product">Product</button>
+            <button class="filter-btn" data-filter="uiux">UI/UX</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="accessibility">Accessibility</button>
+        </div>
+
         <div class="portfolio">
 
-            <div class="portfolio-img">
+            <div class="portfolio-img product accessibility">
                 <a href="../html/workinprogress.html">
                     <img src="../assets/projectphoto/fluid boundaries exhibit square_Award.jpg">
                     <div class="overlay">
@@ -58,7 +70,7 @@
                 </a>
             </div>
 
-            <div class="portfolio-img">
+            <div class="portfolio-img product">
                 <a href="../html/projects/veloce.html">
                     <img src="../assets/shoe-bag-hero-shot-IDA-Award.jpg">
                     <div class="overlay">
@@ -70,19 +82,31 @@
                 </a>
             </div>
 
-            <div class="portfolio-img">
-                <a href="../html/projects/crimson.html">
-                    <img src="../assets/lamp-hero-shot.png">
+            <div class="portfolio-img uiux">
+                <a href="../html/workinprogress.html">
+                    <img src="../assets/projectphoto/HanesHsuWebsite.jpg">
                     <div class="overlay">
                         <div class="overlay-text">
-                            <h5>Crimson Dissent</h5>
-                            <h3>lighting project</h3>
+                            <h5>Hanes Hsu Website</h5>
+                            <h3>100% hand-coded responsive portfolio website </h3>
                         </div>
                     </div>
                 </a>
             </div>
 
-            <div class="portfolio-img">
+            <div class="portfolio-img product">
+                <a href="../html/workinprogress.html">
+                    <img src="../assets/projectphoto/Taco.jpg">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <h5>Taco Lights</h5>
+                            <h3>playful, tactile, modular illumination</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-img product">
                 <a href="../html/workinprogress.html">
                     <img src="../assets/projectphoto/FurnitureCatSquare.jpg">
                     <div class="overlay">
@@ -94,19 +118,7 @@
                 </a>
             </div>
 
-            <div class="portfolio-img">
-                <a href="../html/projects/transfer.html">
-                    <img src="../assets/transfer-system-hero-shot.jpg">
-                    <div class="overlay">
-                        <div class="overlay-text">
-                            <h5>Dueling Dyads</h5>
-                            <h3>daily toilet transfer system</h3>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="portfolio-img">
+            <div class="portfolio-img branding product">
                 <a href="../html/workinprogress.html">
                     <img src="../assets/dyson pen hero shot.png">
                     <div class="overlay">
@@ -118,9 +130,43 @@
                 </a>
             </div>
 
+            <div class="portfolio-img product accessibility">
+                <a href="../html/projects/transfer.html">
+                    <img src="../assets/transfer-system-hero-shot.jpg">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <h5>Dueling Dyads</h5>
+                            <h3>daily toilet transfer system</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
+            <div class="portfolio-img branding">
+                <a href="../html/workinprogress.html">
+                    <img src="../assets/projectphoto/MomoWheels.jpg">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <h5>Momo <br>x <br>Hot Wheels </h5>
+                            <h3>wheel design</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
-            <div class="portfolio-img">
+            <div class="portfolio-img product">
+                <a href="../html/projects/crimson.html">
+                    <img src="../assets/lamp-hero-shot.png">
+                    <div class="overlay">
+                        <div class="overlay-text">
+                            <h5>Crimson Dissent</h5>
+                            <h3>lighting project</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="portfolio-img uiux accessibility">
                 <a href="../html/workinprogress.html">
                     <img src="../assets/projectphoto/museum hero shot.jpg">
                     <div class="overlay">
@@ -132,7 +178,7 @@
                 </a>
             </div>
 
-            <div class="portfolio-img">
+            <div class="portfolio-img uiux">
                 <a href="../html/projects/betweenthewords.html">
                     <img src="../assets/projectphoto/betweenthewords.jpg">
                     <div class="overlay">
