@@ -85,7 +85,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 140px;
+    padding-right: 0px;
     
 }
 
@@ -94,7 +94,7 @@
     flex-direction: row;
     gap: 30px; /* This changes the space between your navigation tabs */
     background-color: transparent;
-    padding-right: 140px;
+    padding-right: 0px;
 }
 
 .nav-item {

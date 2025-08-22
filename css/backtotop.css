@@ -1,0 +1,103 @@
+/* Demo container (optional) */
+/* .container{ display:flex; justify-content:center; width:auto; height:200vh; } */
+/* h1{ font-size:12vw; } */
+
+/* Scroll-to-top button with circular progress */
+.progress-wrap {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.2);
+    z-index: 10000; /* higher than your sticky header */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 200ms linear;
+}
+
+.progress-wrap.active-progress {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Up-arrow icon (Font Awesome) */
+.progress-wrap::after {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f062"; /* up arrow */
+    text-align: center;
+    line-height: 46px;
+    font-size: 18px;
+    color: #1f2029; /* change to #000 if you prefer */
+    left: 0;
+    top: 0;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    transition: all 200ms linear;
+}
+
+.lightScrollIcon::after {
+    /* optional theme variant */
+    color: #ecedf3 !important;
+}
+
+.progress-wrap:hover::after {
+    opacity: 0;
+}
+
+/* Gradient hover state (text fill) */
+.progress-wrap::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f062";
+    text-align: center;
+    line-height: 46px;
+    font-size: 18px;
+    opacity: 0;
+    background-image: linear-gradient(298deg, #da2c4d, #f57600);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: 0;
+    top: 0;
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+    display: block;
+    z-index: 2;
+    transition: all 200ms linear;
+}
+
+.progress-wrap:hover::before {
+    opacity: 1;
+}
+
+/* Circle path styling */
+.progress-wrap svg path {
+    fill: none;
+}
+
+.progress-wrap svg.progress-circle path {
+    stroke: #1f2029; /* change to #000 to match your buttons */
+    stroke-width: 4;
+    box-sizing: border-box;
+    transition: all 200ms linear;
+}
+
+/* Small screens: tuck it in a bit */
+@media (max-width: 575.98px) {
+    .progress-wrap {
+        right: 16px;
+        bottom: 16px;
+    }
+}
